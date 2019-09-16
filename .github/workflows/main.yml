@@ -1,2 +1,11 @@
 name: A CUSTOM workflow for my Hello World file
 on: push
+jobs:
+  build:
+    name: Bradley Ridge's Hello World Action
+    runs-on: ubuntu-latest    
+    steps:
+    - uses: actions/checkout@master
+    - uses: ./action-a
+      env:
+        MY_NAME: "PICKLE RICK"
